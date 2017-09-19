@@ -1,2 +1,3 @@
-# react-dashboard
-React Dashboard using WebSocket backed by SNS
+# Product Dashboard
+
+This is a demo application for showing how to implement a product dashboard using React and Socket.io.
