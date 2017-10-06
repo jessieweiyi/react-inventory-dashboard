@@ -9,7 +9,7 @@ class Dashboard extends Component {
             products: {
               apple:
                 {
-                  remoteStock: 0
+                  stockLevel: 0
                 }
             }
         };
@@ -20,7 +20,7 @@ class Dashboard extends Component {
       const productCodes = Object.keys(products)
       productCodes.forEach(productCode => {
         subscribeToProductStock(productCode, (err, stockLevel) => {
-          products[productCode].remoteStock = stockLevel
+          products[productCode].stockLevel = stockLevel
           this.setState({
             products
           });
@@ -35,7 +35,7 @@ class Dashboard extends Component {
         <div className="App">
           { productCodes.map(productCode =>
               <p className="App-intro" key={productCode}>
-                We have {products[productCode].remoteStock} {productCode}(s)
+                We have {products[productCode].stockLevel} {productCode}(s)
               </p>
             )}
         </div>
